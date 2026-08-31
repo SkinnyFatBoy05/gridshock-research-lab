@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import json
+import time
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass
 from datetime import UTC, date, datetime
@@ -61,9 +62,12 @@ class _HttpClient:
         *,
         transport: httpx.BaseTransport | None = None,
         clock: Callable[[], datetime] | None = None,
+        sleeper: Callable[[float], None] | None = None,
     ) -> None:
         self._transport = transport
         self._clock = clock or (lambda: datetime.now(UTC))
+        self._sleeper = sleeper or time.sleep
+        self._success_delay_seconds = 0.0 if transport is not None else 0.25
 
     @property
     def now(self) -> datetime:
@@ -81,14 +85,27 @@ class _HttpClient:
                     follow_redirects=True,
                 ) as client:
                     response = client.get(url, params=params)
+                if response.status_code == 429:
+                    if _attempt == 2:
+                        response.raise_for_status()
+                    raw_retry_after = response.headers.get("Retry-After", "")
+                    try:
+                        retry_after = float(raw_retry_after)
+                    except ValueError:
+                        retry_after = float(5 * (_attempt + 1))
+                    self._sleeper(min(max(retry_after, 0.0), 30.0))
+                    continue
                 response.raise_for_status()
+                self._sleeper(self._success_delay_seconds)
                 return response.content
             except httpx.HTTPStatusError as error:
                 if error.response.status_code < 500:
                     raise
                 last_error = error
+                self._sleeper(float(2**_attempt))
             except httpx.TransportError as error:
                 last_error = error
+                self._sleeper(float(2**_attempt))
         raise RuntimeError(f"source request failed after 3 attempts: {url}") from last_error
 
 
@@ -100,8 +117,9 @@ class EnergyChartsClient:
         *,
         transport: httpx.BaseTransport | None = None,
         clock: Callable[[], datetime] | None = None,
+        sleeper: Callable[[float], None] | None = None,
     ) -> None:
-        self._http = _HttpClient(transport=transport, clock=clock)
+        self._http = _HttpClient(transport=transport, clock=clock, sleeper=sleeper)
 
     def fetch_prices(self, start: date, end: date) -> SourcePayload:
         _validate_date_range(start, end)
@@ -134,8 +152,9 @@ class OpenMeteoClient:
         *,
         transport: httpx.BaseTransport | None = None,
         clock: Callable[[], datetime] | None = None,
+        sleeper: Callable[[float], None] | None = None,
     ) -> None:
-        self._http = _HttpClient(transport=transport, clock=clock)
+        self._http = _HttpClient(transport=transport, clock=clock, sleeper=sleeper)
 
     def fetch_previous_runs(self, location: Location, start: date, end: date) -> SourcePayload:
         _validate_date_range(start, end)

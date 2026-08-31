@@ -1,0 +1,838 @@
+{
+  "dataset_sha256": "be125fe72e9327e8af39ea03c6f0ff4f0b5f5cd9478b8466e6b8ba8f5b9de903",
+  "delivery_end": "2025-09-30",
+  "delivery_start": "2025-01-01",
+  "derived_dataset": "gridshock_demo.csv.gz",
+  "row_count": 6551,
+  "schema_version": "1.0",
+  "sources": [
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-01-29",
+        "start": "2024-12-30"
+      },
+      "payload_sha256": "e647fc8eb3bced5231e60e416a424a5828a562ecd091ec639c58e4f57065dc33",
+      "request_fingerprint": "aad4ca4bcf2a77904d4653ec26c439fc1cac40c43eba7f554d17a29150341581",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:05.014291Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-03-01",
+        "start": "2025-01-30"
+      },
+      "payload_sha256": "515d8babc29570a4b5f5e4400ec70f70921e9ac7fd8c0204854e89c463fd0359",
+      "request_fingerprint": "b08dbbdc4f78cfad543d5e4449513ffe8c72da4389393d2693a85839ab8a9f40",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:07.538720Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-04-01",
+        "start": "2025-03-02"
+      },
+      "payload_sha256": "d541d15ae5754d5af15e3a834cd1d3ef9e577ee6641573fa9c6b9addb5955b29",
+      "request_fingerprint": "aea8eca0ccf3a4ff404d8e9017617dd4f1e33b2f2c83ee9f63563f3cee51ecc0",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:09.685286Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-05-02",
+        "start": "2025-04-02"
+      },
+      "payload_sha256": "1abfcfcd936970a7a2ec8a232e3553e1847446be2ecf5bfabdad3479197d2ec7",
+      "request_fingerprint": "970e0b21599ddb49abe82eb7ee450b505209049813582822f2356a69639861a3",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:11.953652Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-06-02",
+        "start": "2025-05-03"
+      },
+      "payload_sha256": "23993c5e3e12ed8e4e316254759ea722913efe84dbb25b4477a36c55a478f5d6",
+      "request_fingerprint": "53fc9b4d0d1333bcd8ab963d8627c7017f5afa15ba1c7e47d6a25c61d8e32e5c",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:37.712726Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-07-03",
+        "start": "2025-06-03"
+      },
+      "payload_sha256": "8051d0aa884d5bec387dabbfcfb6309b4f00488c676666ce2e19362d67373179",
+      "request_fingerprint": "299fc595a07752e68e12f2d5292a3c5d07b7eca23cd9300a033264b1a7ff90e0",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:39.869281Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-08-03",
+        "start": "2025-07-04"
+      },
+      "payload_sha256": "f4c203d6b59dcc41fa14cb1900c9669949cab12741839a1ba279d4f65b8cf820",
+      "request_fingerprint": "d9ca7762f8faf5fb4ad071cd0eca31f689743a66d6e3bd8d8f791b6096b89cea",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:42.249459Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-09-03",
+        "start": "2025-08-04"
+      },
+      "payload_sha256": "fba89fe7eb09da6b9a5bc6db047ce375a3522f9859fcc963f432724c18f60db8",
+      "request_fingerprint": "2ef55f943071cbe895a102a792aa8b656d40e1b5e6495085f76d606eb22867f7",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:24:44.440414Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0 (creativecommons.org/licenses/by/4.0) from Bundesnetzagentur | SMARD.de",
+      "params": {
+        "bzn": "DE-LU",
+        "end": "2025-09-30",
+        "start": "2025-09-04"
+      },
+      "payload_sha256": "efd147f0dcbffc9269ec2ad9e3d1741faf260b78b3762e026f8107c664044374",
+      "request_fingerprint": "5b049b88b9956f2fdf7e26b2367545bc648deb78e7f7a8c8de7df02d7b38a345",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:06.761343Z",
+      "source": "Fraunhofer ISE Energy-Charts / SMARD",
+      "timezone": "Europe/Berlin",
+      "unit": "EUR/MWh",
+      "url": "https://api.energy-charts.info/v2/price"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-01-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2024-12-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "d3fe015bd9261cf5f178d20a26e5f266e94f91c8e92ff0edc149a266dfd6488a",
+      "request_fingerprint": "ab8c94259d8b50bc7b61792f926b53136c9d95858eeef7bb81853fe743696d07",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:08.364845Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-03-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-01-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "11e9508d01da241929dae30b2430d3a41cf8591cd638195e8954f8693b0988e1",
+      "request_fingerprint": "078d1a7da9f1840f91d918507c4b053115be6da28bbe0805023f7fc191d2fce1",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:09.955123Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-04-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-03-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "086507d728ab32d1d3adf7fb5eadc3a6b9748ff0d5cf5b474482c608ab555d8f",
+      "request_fingerprint": "d849585b9afede889a5590d140119e3c2a16fd6c7b22bf641c8b065e55e28760",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:11.571193Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-05-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-04-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "d78af367c4c8af1055dcb7b1ede5b7275fb03509ac69e163ab673fa43ef7569d",
+      "request_fingerprint": "825f9a5f9010edf3af8da1e6cf752827322f163b13860bc59db3d2473af488b1",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:13.183387Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-06-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-05-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "8b7250a2ac3cd301538cfdb5bbea09c4313722e9aa14875ba2ced2c1b783597e",
+      "request_fingerprint": "3c8dc1faef2ddde19e901eac839e90659ee3d0808c5187b54ce1d90cc4a63199",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:14.808545Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-07-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-06-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "a9040395bde0896769ed07564e92f3354574099d7582aae63b7d6bd46b5a56de",
+      "request_fingerprint": "919bcc3a02cb4889779b9d9a82a85c4f1f1345f6f1581e68756bf896e7cae23d",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:16.429857Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-08-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-07-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "2762fe265742a436778dfa2989f44742f6e198b89a1c999ef6cab8834893f8e3",
+      "request_fingerprint": "25af37c5da3cf3b4e0859cea90c9e0e443ec9b1518e6ebbc677d29042f6219d8",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:18.097685Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-08-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "b3bd551cb83290a384222abbc378bc6c020a7ef7f6b26672160b920d51e9afa8",
+      "request_fingerprint": "00fe4605fafafc537c6576f5fc2b28c6b64d5c347d6ea426598cc28828d07ce3",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:19.733229Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "52.52",
+        "longitude": "13.41",
+        "start_date": "2025-09-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "c97fc20353192144b550b7cde053c8b7ddddc9253426c1a99f01f17137d6602a",
+      "request_fingerprint": "87720fa98bbdff939dd7f241089f6d4634df066b301e35fccc5b4a62ee13208f",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:21.331129Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-01-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2024-12-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "ae89d2d4cb79b7cedb4469cfe632b28d441d1e172a8152d38c1fb3c7d18f6884",
+      "request_fingerprint": "b4dadda18afb2b6432968115863be1eacf335a839079206ec6eada4bd9c0f6f8",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:22.892475Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-03-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-01-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "32e1a21b2fe95f77170c71533ee5ec560787d568397d8c6ab4f655ca587fd9ee",
+      "request_fingerprint": "18f033ea07aa7398c2a21edfb22921286e3de318fe4845af967f8bc2a19522e0",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:24.508736Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-04-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-03-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "d867d0e99cdaa90559e6a793eec9fa2e16b7c4f0ae47e7673dea4cd188502406",
+      "request_fingerprint": "34035d1f717660d705c2ecb4bd6974d702af7df25fbedc428958a6ff40ac8440",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:26.105410Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-05-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-04-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "dfbffb63d69408df2645a6eb8bb12f15a04645db6d52a9ecd592d6eec62a09b3",
+      "request_fingerprint": "f2ddcc4a1bf09b61ce9232aec2efbad07e81025997a56f769e1518ceccfebb89",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:27.693459Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-06-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-05-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "28747f55e77c491d0baeaed22283489f46bc982b82ab6f0b3deb67a356c5956a",
+      "request_fingerprint": "ac8c65193f98115c2f1b8a7864a85d58531c87ff5db0c7aa9a1a6bc050d680de",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:29.308436Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-07-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-06-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "46182e0a6c17cd32aebc968d5d3b7013578feb04013bb0f71ea2eeecf0f2d24c",
+      "request_fingerprint": "92303af386ad1fdfbeab62692f91d0070f972f3a4ca1147326b4121f09ff5a73",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:30.882544Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-08-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-07-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "6b7e7ac01d1d137c433f84eaed676e4c7898f9d47518b98e2f803f4a3d79077d",
+      "request_fingerprint": "87eca36ccff465a9ec42bb9bbeeb675b54382d79be4add60b36a06cb47b9174b",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:32.456550Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-08-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "8ab699f8483e4a5afd2a89c5dff1fbf28592b239cb8efdd8eb92871a9e88c0e7",
+      "request_fingerprint": "bcd54b3d5bad712d31125c13798839b042a6a632b4baf8cb46498f093464fdcc",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:34.014548Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "53.55",
+        "longitude": "9.99",
+        "start_date": "2025-09-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "0625f857deec1218d7a22c2311320777a037504f8deb71cf12f33cfee05f56ba",
+      "request_fingerprint": "ba577cee2fcb8f8a120c51a3566b59cdc53bcd414a9d2dc7a22807e6c0b64d0a",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:35.579446Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-01-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2024-12-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "543ca1a6b1ead7829994c5b361720a720fa8563d3535ee1dab7b2f5dc85c1add",
+      "request_fingerprint": "4d537e5e959bcbb2f6cb6414447f565e6b57f62105b520462dbeff45a905207a",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:37.149808Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-03-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-01-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "5258569ff79860ebe86d5288da5ab85c09c84f839c8f1eb75ddf6d130f90028a",
+      "request_fingerprint": "4693526683cc4dc0d22fafedf52c41dba454a5c4c91132b9f4ad456946358716",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:38.738047Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-04-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-03-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "c3cc9c27fb48d7b239e265d7bcf2780b845ff51f1081d92a6717ebd0e2f8766a",
+      "request_fingerprint": "5a685003bd4b7b23609328e4d4878ebedb7cc98b43a5f3315d3124ac7da2a683",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:40.303603Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-05-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-04-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "bba9d22aaa6ad451cd5275be83255dc90b7b80ff7695c9a8892c07820c61ea7e",
+      "request_fingerprint": "cfb7e8667ccbea37352334fd9ece6ea51b8edd4b7efff7555ef3a87b7379d020",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:41.861025Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-06-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-05-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "32442a3825c22dcf634b67930aad97bf474e9321f8b6db34c5d545b83fcd8832",
+      "request_fingerprint": "9b749a70bd034741c63552afd02a5f937cd6a3926e7a295f18b3876250c6bac0",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:43.507064Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-07-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-06-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "2350ccab55720ccc6758ca561b01a0bc1b99cd11595c3f5816ed4d43699e681d",
+      "request_fingerprint": "840b7f36ed40f2de3bb6394bab437d3c1f9838becd22a0638409024852525044",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:45.115209Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-08-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-07-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "7b90577d01d365156d3517e442cc7c1ea5418d038d996bad5a015726982969bd",
+      "request_fingerprint": "28790d7276fdc62ad71d84a5397f870a18b997ff8d21350c1e8a67fb2eabfd25",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:46.684517Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-08-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "710c9281a52ebf48927d433b2b2bb056eafc6d09cafafb0cbb7818a47c7c348d",
+      "request_fingerprint": "749cebaf5c83ea29c0ffb7e73dccab25df4dfc2fa899564b3d2fd9123d9f7c49",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:48.240051Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "50.11",
+        "longitude": "8.68",
+        "start_date": "2025-09-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "08a318c7cfc476ee6e71a582116458f5e1af1835bcfa968c27e6a8a58e6309cb",
+      "request_fingerprint": "1d2c8a3a682867c02806e8d3b40fd6db2a1843a5a2ded771683c821fd4d5a122",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:49.784119Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-01-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2024-12-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "9bd3bd75e5e6a79442f187d7fc72caac5062030ff0e1da081081db248d19b6c3",
+      "request_fingerprint": "a83e45131c9048c0c7a2e5dd13df2db6d93151934a90860b55afd4b27ac3814f",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:51.385058Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-03-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-01-31",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "3b3646f88db84b310ebcca7295e89d452754547c07dedaf47af628d6a99ebaf7",
+      "request_fingerprint": "de6e14602e53174ab716609394c3c9eae625ca7ed4e9a61d770fbd2392670acb",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:52.948798Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-04-02",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-03-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "7443289ba0f4e7b991eef6451a1a5671df938849167ca36cce15e115056ebff1",
+      "request_fingerprint": "875bb6f54c1792fff42817ea16b456725fff1790abf392d8b8dc92fe80bb2ac5",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:54.535800Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-05-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-04-03",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "ac559e538be46dec5a61f7c2142410d1df418fb57e31a5750ac4894cdd923635",
+      "request_fingerprint": "5363e7e46590c034901c7b99136da8b2b8dbd0e1b60dc60874658e5664f6fd2c",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:56.112419Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-06-03",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-05-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "cfb225da4f74a5a057a3c71cd03ddf9bbb058e5432a99e50f39567201d542f1c",
+      "request_fingerprint": "ca7e7444e76593bb75bcea1d8b8cf055e64dd38161c83ddeb41606d8fec4ec2d",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:57.695730Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-07-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-06-04",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "855878250fee6135bb2c9d3162b67c8aa8cf4ade9eb7e527d01839598cdd6d12",
+      "request_fingerprint": "6d1f9fdc098740b3242fe47daa8af6706135bed2883c3406f301563eb7d300fa",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:25:59.362822Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-08-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-07-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "a080f83c6c6baf2a4a7aaf1eaec762e63525eb029e81928d168f460482cbefc3",
+      "request_fingerprint": "4a79086b5d2827aaf0f312316daa64c10ee2e74fab90f4f519367cb94e479c9b",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:26:00.960140Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-04",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-08-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "5654131eaa8e4b673231983f8f4daba9f30a173d3ea633fb1b79a0374eb2789c",
+      "request_fingerprint": "dbb43248f21dfef81b0b1d6160fccfaa6521177cbdf3c37ba80288ac669df7c0",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:26:02.562616Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    },
+    {
+      "license": "CC BY 4.0; attribution: Open-Meteo.com",
+      "params": {
+        "end_date": "2025-09-30",
+        "hourly": "temperature_2m_previous_day2,wind_speed_100m_previous_day2,shortwave_radiation_previous_day2",
+        "latitude": "48.14",
+        "longitude": "11.58",
+        "start_date": "2025-09-05",
+        "timezone": "UTC"
+      },
+      "payload_sha256": "1927ed2ec2da85a311738add4663617a6689409d5370dd6e045ca7e92bd31d67",
+      "request_fingerprint": "815ad06dc76c84b237e0702a5239667b2506e4d0b6d7950d6a856b5307d61e99",
+      "resolution": "hourly",
+      "retrieved_at_utc": "2026-08-31T00:26:04.182310Z",
+      "source": "Open-Meteo Previous Runs API",
+      "timezone": "UTC",
+      "unit": "multiple (see hourly_units)",
+      "url": "https://previous-runs-api.open-meteo.com/v1/forecast"
+    }
+  ]
+}

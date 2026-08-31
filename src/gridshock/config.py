@@ -5,6 +5,25 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 
+DEFAULT_FEATURE_COLUMNS = (
+    "price_lag_48h",
+    "hour_sin",
+    "hour_cos",
+    "weekday_sin",
+    "weekday_cos",
+    "is_weekend",
+    "wx_fcst_48h_temperature_2m_regional_mean",
+    "wx_fcst_48h_wind_speed_100m_regional_mean",
+    "wx_fcst_48h_shortwave_radiation_regional_mean",
+    "heating_degree_proxy",
+    "cooling_degree_proxy",
+    "wind_scarcity_proxy",
+    "solar_availability_proxy",
+    "wx_missing_temperature_2m",
+    "wx_missing_wind_speed_100m",
+    "wx_missing_shortwave_radiation",
+)
+
 
 @dataclass(frozen=True)
 class ProjectPaths:
@@ -50,3 +69,16 @@ class ExperimentConfig:
         for name in ("train_days", "validation_days", "step_days", "holdout_days"):
             if getattr(self, name) <= 0:
                 raise ValueError(f"{name} must be positive")
+
+
+def default_experiment_config() -> ExperimentConfig:
+    """Return the predeclared public-demo evaluation contract."""
+
+    return ExperimentConfig(
+        feature_columns=DEFAULT_FEATURE_COLUMNS,
+        train_days=120,
+        validation_days=30,
+        step_days=30,
+        holdout_days=45,
+        random_seed=42,
+    )

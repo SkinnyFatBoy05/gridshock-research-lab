@@ -110,6 +110,30 @@ def test_weather_client_requests_only_previous_day2_fields() -> None:
     assert result.manifest.resolution == "hourly"
 
 
+def test_energy_client_honours_rate_limit_then_retries() -> None:
+    attempts = 0
+    sleeps: list[float] = []
+
+    def handler(request: httpx.Request) -> httpx.Response:
+        nonlocal attempts
+        attempts += 1
+        if attempts == 1:
+            return httpx.Response(429, headers={"Retry-After": "0"}, request=request)
+        return httpx.Response(200, content=_payload(PRICE_RESPONSE), request=request)
+
+    client = EnergyChartsClient(
+        transport=httpx.MockTransport(handler),
+        clock=lambda: datetime(2026, 8, 31, tzinfo=UTC),
+        sleeper=sleeps.append,
+    )
+
+    result = client.fetch_prices(date(2025, 1, 1), date(2025, 1, 2))
+
+    assert attempts == 2
+    assert sleeps[0] == 0.0
+    assert result.manifest.unit == "EUR/MWh"
+
+
 @pytest.mark.parametrize(
     "client",
     [EnergyChartsClient(), OpenMeteoClient()],
