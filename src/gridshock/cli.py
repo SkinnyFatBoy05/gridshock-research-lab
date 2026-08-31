@@ -260,6 +260,10 @@ def build_parser() -> argparse.ArgumentParser:
     subcommands.add_parser("version", help="show the package version")
     demo = subcommands.add_parser("demo", help="run the deterministic offline research demo")
     demo.add_argument("--root", type=Path, default=None)
+    train = subcommands.add_parser("train", help="run chronological model evaluation")
+    train.add_argument("--root", type=Path, default=None)
+    backtest = subcommands.add_parser("backtest", help="run the cost-aware holdout ledger")
+    backtest.add_argument("--root", type=Path, default=None)
     fetch = subcommands.add_parser("fetch", help="inspect one bounded live source window")
     fetch.add_argument("--start", type=date.fromisoformat, required=True)
     fetch.add_argument("--end", type=date.fromisoformat, required=True)
@@ -293,6 +297,25 @@ def main(args: Sequence[str] | None = None) -> int:
     if parsed.command == "demo":
         paths = ProjectPaths.discover(parsed.root)
         print(json.dumps(run_demo(paths).summary(), indent=2, sort_keys=True))
+        return 0
+    if parsed.command == "train":
+        paths = ProjectPaths.discover(parsed.root)
+        result = run_demo(paths)
+        print(json.dumps(result.summary()["holdout_forecast"], indent=2, sort_keys=True))
+        return 0
+    if parsed.command == "backtest":
+        paths = ProjectPaths.discover(parsed.root)
+        result = run_demo(paths)
+        print(
+            json.dumps(
+                {
+                    "placebo_net_total_eur": result.placebo_metrics["net_total_eur"],
+                    "strategy": result.strategy_metrics,
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
         return 0
     if parsed.command == "fetch":
         print(json.dumps(_fetch_summary(parsed.start, parsed.end), indent=2, sort_keys=True))

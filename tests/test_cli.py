@@ -1,14 +1,17 @@
 from __future__ import annotations
 
+import json
 import socket
 from datetime import date
+from pathlib import Path
+from types import SimpleNamespace
 
 import httpx
 import numpy as np
 import pandas as pd
 import pytest
 
-from gridshock.cli import main, run_demo, write_demo_fixture
+from gridshock.cli import build_parser, main, run_demo, write_demo_fixture
 from gridshock.config import ExperimentConfig, ProjectPaths
 from gridshock.contracts import DataContractError
 from gridshock.time import decision_cutoff_utc
@@ -103,3 +106,44 @@ def test_complete_normal_delivery_day_has_24_rows() -> None:
     frame = _offline_feature_frame(days=1)
 
     assert frame.loc[frame["delivery_day"] == date(2025, 1, 1)].shape[0] == 24
+
+
+def test_readme_exposes_offline_path_transition_and_limitations() -> None:
+    readme = (Path(__file__).resolve().parents[1] / "README.md").read_text(encoding="utf-8")
+
+    assert "uv run gridshock demo" in readme
+    assert "uv run gridshock verify" in readme
+    assert "2025-10-01" in readme
+    assert "not financial advice" in readme.lower()
+    assert "Energy-Charts" in readme
+    assert "Open-Meteo" in readme
+
+
+@pytest.mark.parametrize("command", ["train", "backtest", "report", "verify"])
+def test_research_commands_accept_an_explicit_project_root(command: str, tmp_path) -> None:
+    parsed = build_parser().parse_args([command, "--root", str(tmp_path)])
+
+    assert parsed.command == command
+    assert parsed.root == tmp_path
+
+
+def test_train_command_prints_only_holdout_metrics(monkeypatch, capsys, tmp_path) -> None:
+    result = SimpleNamespace(summary=lambda: {"holdout_forecast": {"model": {"mae": 1.5}}})
+    monkeypatch.setattr("gridshock.cli.run_demo", lambda _paths: result)
+
+    assert main(["train", "--root", str(tmp_path)]) == 0
+    assert json.loads(capsys.readouterr().out) == {"model": {"mae": 1.5}}
+
+
+def test_backtest_command_prints_strategy_and_placebo(monkeypatch, capsys, tmp_path) -> None:
+    result = SimpleNamespace(
+        strategy_metrics={"net_total_eur": 12.0},
+        placebo_metrics={"net_total_eur": -3.0},
+    )
+    monkeypatch.setattr("gridshock.cli.run_demo", lambda _paths: result)
+
+    assert main(["backtest", "--root", str(tmp_path)]) == 0
+    assert json.loads(capsys.readouterr().out) == {
+        "placebo_net_total_eur": -3.0,
+        "strategy": {"net_total_eur": 12.0},
+    }
