@@ -1,0 +1,14 @@
+.coverage
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.venv/
+.worktrees/
+__pycache__/
+build/
+dist/
+*.egg-info/
+*.py[cod]
+data/raw/
+reports/.staging/
+
