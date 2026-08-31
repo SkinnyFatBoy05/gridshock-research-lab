@@ -1,0 +1,280 @@
+{
+  "chart_map": [
+    {
+      "family": "trend",
+      "file": "forecast_vs_actual.png",
+      "question": "How did each comparator track the selected stress day?",
+      "section": "Forecast evidence"
+    },
+    {
+      "family": "comparison",
+      "file": "error_by_hour.png",
+      "question": "Where does forecast error vary across delivery hours?",
+      "section": "Error diagnostics"
+    },
+    {
+      "family": "progression",
+      "file": "equity_drawdown.png",
+      "question": "How does cost-adjusted proxy value evolve and draw down?",
+      "section": "Strategy proxy"
+    },
+    {
+      "family": "discrete comparison",
+      "file": "cost_sensitivity.png",
+      "question": "How sensitive is the fixed position ledger to four cost scenarios?",
+      "section": "Cost robustness"
+    }
+  ],
+  "cost_sensitivity": [
+    {
+      "active_days": 45.0,
+      "annualised_sharpe_sqrt_365": 47.38356467110452,
+      "cost_eur_mwh": 0.0,
+      "cost_total_eur": 0.0,
+      "expected_shortfall_5pct_eur": 141.10000000000002,
+      "gross_total_eur": 16762.980000000003,
+      "hit_rate": 1.0,
+      "max_drawdown_eur": -0.0,
+      "mean_daily_net_eur": 372.51066666666674,
+      "net_total_eur": 16762.980000000003,
+      "turnover_legs": 270.0,
+      "worst_day_eur": 130.36
+    },
+    {
+      "active_days": 45.0,
+      "annualised_sharpe_sqrt_365": 47.00196299702276,
+      "cost_eur_mwh": 0.5,
+      "cost_total_eur": 135.0,
+      "expected_shortfall_5pct_eur": 138.10000000000002,
+      "gross_total_eur": 16762.980000000003,
+      "hit_rate": 1.0,
+      "max_drawdown_eur": -0.0,
+      "mean_daily_net_eur": 369.51066666666674,
+      "net_total_eur": 16627.980000000003,
+      "turnover_legs": 270.0,
+      "worst_day_eur": 127.36000000000001
+    },
+    {
+      "active_days": 45.0,
+      "annualised_sharpe_sqrt_365": 46.620361322941,
+      "cost_eur_mwh": 1.0,
+      "cost_total_eur": 270.0,
+      "expected_shortfall_5pct_eur": 135.10000000000002,
+      "gross_total_eur": 16762.980000000003,
+      "hit_rate": 1.0,
+      "max_drawdown_eur": -0.0,
+      "mean_daily_net_eur": 366.51066666666674,
+      "net_total_eur": 16492.980000000003,
+      "turnover_legs": 270.0,
+      "worst_day_eur": 124.36000000000001
+    },
+    {
+      "active_days": 45.0,
+      "annualised_sharpe_sqrt_365": 45.85715797477746,
+      "cost_eur_mwh": 2.0,
+      "cost_total_eur": 540.0,
+      "expected_shortfall_5pct_eur": 129.10000000000002,
+      "gross_total_eur": 16762.980000000003,
+      "hit_rate": 1.0,
+      "max_drawdown_eur": -0.0,
+      "mean_daily_net_eur": 360.5106666666667,
+      "net_total_eur": 16222.980000000001,
+      "turnover_legs": 270.0,
+      "worst_day_eur": 118.36000000000001
+    }
+  ],
+  "figures": {
+    "cost_sensitivity.png": "9f6bcede6914bbb003003f672bf64be94fb0c975c073fb3ba632461288b80450",
+    "equity_drawdown.png": "32335be91d620f7c537429b2dec7c8194da8617dcca77a95e9306c5c1b7c6693",
+    "error_by_hour.png": "ad671147a3f94ef6cf0aa449bdeb9ef2dfccd9402ad15c23dc233c77c7dbb696",
+    "forecast_vs_actual.png": "960e4da5a42e19f0350d2b95a2e2cff608c46ceb19c751fd0d1b7a254db9392c"
+  },
+  "forecast_metrics": [
+    {
+      "fold": "holdout",
+      "mae": 18.076435479827794,
+      "median_absolute_error": 11.168972513513758,
+      "model": "hist_gradient_boosting",
+      "n_observations": 1080,
+      "rank_correlation": 0.8968439599974751,
+      "rmse": 29.85984701444766,
+      "split_type": "holdout"
+    },
+    {
+      "fold": "holdout",
+      "mae": 21.790450631271383,
+      "median_absolute_error": 15.02954883438094,
+      "model": "ridge",
+      "n_observations": 1080,
+      "rank_correlation": 0.8634312908445848,
+      "rmse": 33.63537561042326,
+      "split_type": "holdout"
+    },
+    {
+      "fold": "holdout",
+      "mae": 37.36293518518519,
+      "median_absolute_error": 22.729999999999997,
+      "model": "seasonal_naive",
+      "n_observations": 1080,
+      "rank_correlation": 0.80454635318812,
+      "rmse": 54.814190203679786,
+      "split_type": "holdout"
+    },
+    {
+      "fold": "fold_01",
+      "mae": 19.448871250729756,
+      "median_absolute_error": 14.34722443587065,
+      "model": "hist_gradient_boosting",
+      "n_observations": 720,
+      "rank_correlation": 0.8982355191265874,
+      "rmse": 27.37869111084487,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_01",
+      "mae": 24.29653676405946,
+      "median_absolute_error": 18.3151353323568,
+      "model": "ridge",
+      "n_observations": 720,
+      "rank_correlation": 0.8200043867754737,
+      "rmse": 32.47544984992537,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_01",
+      "mae": 29.268625,
+      "median_absolute_error": 16.449999999999996,
+      "model": "seasonal_naive",
+      "n_observations": 720,
+      "rank_correlation": 0.8398362800654932,
+      "rmse": 45.074966437098496,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_02",
+      "mae": 21.624167485358647,
+      "median_absolute_error": 16.982684848104196,
+      "model": "hist_gradient_boosting",
+      "n_observations": 720,
+      "rank_correlation": 0.9245441542105323,
+      "rmse": 28.47029186020864,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_02",
+      "mae": 30.169997394387693,
+      "median_absolute_error": 20.576276153922105,
+      "model": "ridge",
+      "n_observations": 720,
+      "rank_correlation": 0.8163664285616896,
+      "rmse": 43.4476161218104,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_02",
+      "mae": 28.482874999999996,
+      "median_absolute_error": 19.414999999999992,
+      "model": "seasonal_naive",
+      "n_observations": 720,
+      "rank_correlation": 0.8527925976635,
+      "rmse": 39.45254471267418,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_03",
+      "mae": 17.856125041643423,
+      "median_absolute_error": 11.619654823499957,
+      "model": "hist_gradient_boosting",
+      "n_observations": 720,
+      "rank_correlation": 0.9088821257546926,
+      "rmse": 28.231473966612032,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_03",
+      "mae": 16.86878550409975,
+      "median_absolute_error": 12.393105772839107,
+      "model": "ridge",
+      "n_observations": 720,
+      "rank_correlation": 0.844401869558944,
+      "rmse": 26.38087290238955,
+      "split_type": "validation"
+    },
+    {
+      "fold": "fold_03",
+      "mae": 25.443541666666665,
+      "median_absolute_error": 13.594999999999999,
+      "model": "seasonal_naive",
+      "n_observations": 720,
+      "rank_correlation": 0.7967528679121332,
+      "rmse": 42.80819867119174,
+      "split_type": "validation"
+    }
+  ],
+  "input_sha256": "be125fe72e9327e8af39ea03c6f0ff4f0b5f5cd9478b8466e6b8ba8f5b9de903",
+  "package_version": "0.1.0",
+  "placebo_metrics": {
+    "active_days": 45.0,
+    "annualised_sharpe_sqrt_365": -0.19720273831537863,
+    "cost_total_eur": 135.0,
+    "expected_shortfall_5pct_eur": -320.21333333333337,
+    "gross_total_eur": 67.39999999999989,
+    "hit_rate": 0.5111111111111111,
+    "max_drawdown_eur": 1439.3300000000002,
+    "mean_daily_net_eur": -1.5022222222222252,
+    "net_total_eur": -67.60000000000014,
+    "turnover_legs": 270.0,
+    "worst_day_eur": -337.67
+  },
+  "schema_version": "1.0",
+  "strategy_metrics": {
+    "active_days": 45.0,
+    "annualised_sharpe_sqrt_365": 47.00196299702276,
+    "cost_total_eur": 135.0,
+    "expected_shortfall_5pct_eur": 138.10000000000002,
+    "gross_total_eur": 16762.980000000003,
+    "hit_rate": 1.0,
+    "max_drawdown_eur": -0.0,
+    "mean_daily_net_eur": 369.51066666666674,
+    "net_total_eur": 16627.980000000003,
+    "turnover_legs": 270.0,
+    "worst_day_eur": 127.36000000000001
+  },
+  "summary": {
+    "dataset_rows": 6551,
+    "delivery_end": "2025-09-30",
+    "delivery_start": "2025-01-01",
+    "holdout_forecast": {
+      "hist_gradient_boosting": {
+        "mae": 18.076435,
+        "rank_correlation": 0.896844,
+        "rmse": 29.859847
+      },
+      "ridge": {
+        "mae": 21.790451,
+        "rank_correlation": 0.863431,
+        "rmse": 33.635376
+      },
+      "seasonal_naive": {
+        "mae": 37.362935,
+        "rank_correlation": 0.804546,
+        "rmse": 54.81419
+      }
+    },
+    "input_sha256": "be125fe72e9327e8af39ea03c6f0ff4f0b5f5cd9478b8466e6b8ba8f5b9de903",
+    "placebo_net_total_eur": -67.6,
+    "strategy": {
+      "active_days": 45.0,
+      "annualised_sharpe_sqrt_365": 47.001963,
+      "cost_total_eur": 135.0,
+      "expected_shortfall_5pct_eur": 138.1,
+      "gross_total_eur": 16762.98,
+      "hit_rate": 1.0,
+      "max_drawdown_eur": -0.0,
+      "mean_daily_net_eur": 369.510667,
+      "net_total_eur": 16627.98,
+      "turnover_legs": 270.0,
+      "worst_day_eur": 127.36
+    }
+  }
+}

@@ -263,6 +263,10 @@ def build_parser() -> argparse.ArgumentParser:
     fetch = subcommands.add_parser("fetch", help="inspect one bounded live source window")
     fetch.add_argument("--start", type=date.fromisoformat, required=True)
     fetch.add_argument("--end", type=date.fromisoformat, required=True)
+    report = subcommands.add_parser("report", help="generate the self-contained HTML brief")
+    report.add_argument("--root", type=Path, default=None)
+    verify = subcommands.add_parser("verify", help="verify committed data and report artifacts")
+    verify.add_argument("--root", type=Path, default=None)
     return parser
 
 
@@ -293,6 +297,18 @@ def main(args: Sequence[str] | None = None) -> int:
     if parsed.command == "fetch":
         print(json.dumps(_fetch_summary(parsed.start, parsed.end), indent=2, sort_keys=True))
         return 0
+    if parsed.command == "report":
+        from gridshock.reporting import render_report
+
+        paths = ProjectPaths.discover(parsed.root)
+        print(render_report(run_demo(paths), paths))
+        return 0
+    if parsed.command == "verify":
+        from gridshock.reporting import verify_artifacts
+
+        errors = verify_artifacts(ProjectPaths.discover(parsed.root))
+        print(json.dumps({"errors": errors, "ok": not errors}, indent=2, sort_keys=True))
+        return int(bool(errors))
     return 2
 
 
