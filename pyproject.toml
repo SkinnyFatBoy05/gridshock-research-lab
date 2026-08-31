@@ -62,3 +62,7 @@ python_version = "3.11"
 strict = true
 warn_unreachable = true
 packages = ["gridshock"]
+
+[[tool.mypy.overrides]]
+module = ["sklearn.*"]
+ignore_missing_imports = true

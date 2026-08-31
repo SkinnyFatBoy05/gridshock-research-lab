@@ -31,3 +31,22 @@ class ProjectPaths:
             figures=reports / "figures",
             experiment_manifest=reports / "experiment_manifest.json",
         )
+
+
+@dataclass(frozen=True)
+class ExperimentConfig:
+    """Parameters that define chronological model evaluation."""
+
+    feature_columns: tuple[str, ...]
+    train_days: int = 90
+    validation_days: int = 30
+    step_days: int = 30
+    holdout_days: int = 30
+    random_seed: int = 42
+
+    def __post_init__(self) -> None:
+        if not self.feature_columns:
+            raise ValueError("feature_columns must not be empty")
+        for name in ("train_days", "validation_days", "step_days", "holdout_days"):
+            if getattr(self, name) <= 0:
+                raise ValueError(f"{name} must be positive")
