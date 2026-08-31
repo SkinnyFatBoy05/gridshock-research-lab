@@ -65,10 +65,11 @@ flowchart LR
     H --> I[HTML report + integrity manifest]
 ```
 
-The central invariant is `available_at_utc <= cutoff_utc` for every predictive feature. Prices,
-weather fields, units, source payload hashes, request fingerprints, and retrieval timestamps are
-validated or recorded before modelling. Local delivery-day logic uses `Europe/Berlin`; storage and
-joins use timezone-aware UTC, including the 23-hour spring DST day.
+The declared decision cutoff is 12:00 `Europe/Berlin` on delivery day D-1. The central invariant is
+`available_at_utc <= cutoff_utc` for every predictive feature. Prices, weather fields, units, source
+payload hashes, request fingerprints, and retrieval timestamps are validated or recorded before
+modelling. Local delivery-day logic uses `Europe/Berlin`; storage and joins use timezone-aware UTC,
+including the 23-hour spring DST day.
 
 ## Data and scope
 

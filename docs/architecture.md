@@ -34,15 +34,15 @@ flowchart TD
 
 ## Decision timeline
 
-For each delivery day, the declared cutoff is 12:00 Europe/Berlin two calendar days before
+For each delivery day, the declared cutoff is 12:00 Europe/Berlin on the calendar day before
 delivery. Fixed-lag `previous_day2` weather fields are treated as available by that cutoff. The price
 lag uses observations from 48 hours earlier and checks their own recorded availability. A feature
 row is rejected if any predictive input became available after its cutoff.
 
 ```text
-T-48h or earlier        declared decision cutoff             delivery interval
-historical price  ---> all features known and checked ---> target price observed
-archived forecast ---> available_at_utc <= cutoff_utc
+approximately T-48h          D-1 at 12:00 local              delivery interval
+historical price      ---> all features known and checked ---> target price observed
+archived forecast    ---> available_at_utc <= cutoff_utc
 ```
 
 All joins occur in timezone-aware UTC. Delivery-day grouping converts to `Europe/Berlin`, so the

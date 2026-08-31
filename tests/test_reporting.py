@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from pathlib import Path
 
 import matplotlib.image as mpimg
@@ -71,3 +72,20 @@ def test_verifier_detects_tampered_figure(demo_result, project_paths) -> None:
         assert any("cost_sensitivity.png hash mismatch" in error for error in errors)
     finally:
         figure.write_bytes(original)
+
+
+def test_verifier_detects_tampered_numerical_summary(demo_result, project_paths) -> None:
+    render_report(demo_result, project_paths)
+    manifest_path = project_paths.experiment_manifest
+    original = manifest_path.read_bytes()
+    try:
+        manifest = json.loads(original)
+        manifest["summary"]["dataset_rows"] += 1
+        manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+
+        errors = verify_artifacts(project_paths)
+
+        assert "experiment summary mismatch" in errors
+        assert "report manifest hash mismatch" in errors
+    finally:
+        manifest_path.write_bytes(original)

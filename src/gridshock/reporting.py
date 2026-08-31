@@ -424,7 +424,16 @@ def verify_artifacts(paths: ProjectPaths | None = None) -> list[str]:
     experiment = json.loads(resolved.experiment_manifest.read_text(encoding="utf-8"))
     if experiment.get("input_sha256") != actual_input_hash:
         errors.append("experiment manifest input hash mismatch")
-    for name, expected_hash in experiment.get("figures", {}).items():
+    from gridshock.cli import run_demo
+
+    replay_summary = run_demo(resolved).summary()
+    if experiment.get("summary") != replay_summary:
+        errors.append("experiment summary mismatch")
+    figure_hashes = experiment.get("figures", {})
+    if not isinstance(figure_hashes, dict) or set(figure_hashes) != set(FIGURE_NAMES):
+        errors.append("experiment figure register mismatch")
+        figure_hashes = {}
+    for name, expected_hash in figure_hashes.items():
         path = resolved.figures / name
         if not path.exists():
             errors.append(f"missing figure: {name}")
@@ -442,4 +451,7 @@ def verify_artifacts(paths: ProjectPaths | None = None) -> list[str]:
     ):
         if phrase not in report:
             errors.append(f"report missing required content: {phrase}")
+    manifest_hash = sha256_bytes(resolved.experiment_manifest.read_bytes())
+    if manifest_hash not in report:
+        errors.append("report manifest hash mismatch")
     return errors

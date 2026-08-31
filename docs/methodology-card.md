@@ -14,7 +14,7 @@ hourly DE-LU day-ahead prices, compared with simple time-aware baselines?
 
 ## Information set
 
-The decision cutoff is noon Europe/Berlin two calendar days before delivery. Predictors comprise a
+The decision cutoff is noon Europe/Berlin on the calendar day before delivery. Predictors comprise a
 48-hour price lag, periodic calendar features, `previous_day2` archived weather forecasts, regional
 means, degree/scarcity proxies, and weather missingness flags. Every predictive input must satisfy
 `available_at_utc <= cutoff_utc`; target values are never treated as features.
