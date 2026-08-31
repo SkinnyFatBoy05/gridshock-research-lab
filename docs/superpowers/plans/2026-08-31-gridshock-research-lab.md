@@ -13,7 +13,7 @@
 ## Global Constraints
 
 - The simulated decision cutoff is 12:00 `Europe/Berlin` on delivery day D-1.
-- Version 1 delivery dates are 2024-01-01 through 2025-09-30 and use hourly DE-LU prices only.
+- Version 1 common-coverage delivery dates are 2025-01-01 through 2025-09-30 and use hourly DE-LU prices only; null early-2024 fixed-lag weather is excluded rather than imputed.
 - Open-Meteo predictive features use fixed-lag `previous_day2` fields; observed weather is never a same-day predictive feature.
 - All internal joins and availability checks use aware UTC timestamps; local market labels use `Europe/Berlin` only at boundaries.
 - Spring and autumn DST days retain 23 and 25 distinct UTC delivery intervals.
@@ -405,7 +405,7 @@ Expected: FAIL because the fixture and demo orchestrator are absent.
 
 - [ ] **Step 3: Fetch bounded official slices through the tested adapters**
 
-Use successive 31-day requests covering 2024-01-01 through 2025-09-30 for Energy-Charts prices and the four Open-Meteo locations. Preserve raw-response manifests, construct the canonical derived table, verify all availability rules, and write a compressed derived fixture plus aggregate manifest. If a requested weather field has incomplete coverage, retain the documented common subset instead of imputing future information.
+Use successive 31-day requests covering 2025-01-01 through 2025-09-30 for Energy-Charts prices and the four Open-Meteo locations, plus the minimum earlier price history required for lag construction. Preserve raw-response manifests, construct the canonical derived table, verify all availability rules, and write a compressed derived fixture plus aggregate manifest. If a requested weather field has incomplete coverage, retain the documented common subset instead of imputing future information.
 
 - [ ] **Step 4: Implement and run the offline demo twice**
 

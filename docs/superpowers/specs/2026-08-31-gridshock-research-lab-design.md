@@ -52,7 +52,7 @@ The default simulated decision cutoff is **12:00 Europe/Berlin on delivery day D
 
 The target is the hourly DE-LU day-ahead auction price in EUR/MWh. The research signal ranks every valid hourly delivery interval within each local delivery day, including the 23- and 25-hour daylight-saving cases. It does not simulate physical delivery, exchange membership, margin, collateral, balancing exposure, or order-book execution.
 
-Version 1 uses delivery dates from **2024-01-01 through 2025-09-30** so the target is a homogeneous hourly product and the weather previous-runs archive is available. Delivery day 2025-10-01 introduced the 15-minute market time unit across Single Day-Ahead Coupling; post-transition data are excluded rather than silently aggregated. A later version may model the 15-minute product as a separate regime.
+Version 1 uses the common-coverage delivery dates from **2025-01-01 through 2025-09-30** so the selected fixed-lag weather fields are populated and the target remains a homogeneous hourly product. Live API inspection during implementation found null fixed-lag weather values in early 2024, so that period is excluded rather than imputed. Delivery day 2025-10-01 introduced the 15-minute market time unit across Single Day-Ahead Coupling; post-transition data are excluded rather than silently aggregated. A later version may model the 15-minute product as a separate regime.
 
 ## 5. Data sources and licensing
 
